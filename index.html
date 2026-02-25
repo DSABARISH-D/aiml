@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Test Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Coding Test Platform</h1>
+      <p>Run realistic timed coding assessments directly in the browser.</p>
+    </header>
+
+    <main class="layout">
+      <aside class="panel" id="challenge-panel">
+        <h2>Challenges</h2>
+        <ul id="challenge-list"></ul>
+      </aside>
+
+      <section class="panel" id="workspace">
+        <div class="workspace-top">
+          <div>
+            <h2 id="challenge-title">Select a challenge</h2>
+            <p id="challenge-description"></p>
+            <p class="meta" id="challenge-meta"></p>
+          </div>
+          <div class="timer-box">
+            <span>Time Left</span>
+            <strong id="timer">--:--</strong>
+          </div>
+        </div>
+
+        <section class="candidate-row">
+          <label for="candidate-name">Candidate Name</label>
+          <input id="candidate-name" type="text" placeholder="e.g. Jane Doe" />
+          <label class="checkbox">
+            <input type="checkbox" id="reveal-public-tests" />
+            Reveal public tests in output
+          </label>
+        </section>
+
+        <label for="editor">Code Editor (must define <code>solve(input)</code>)</label>
+        <textarea id="editor" spellcheck="false"></textarea>
+
+        <div class="controls">
+          <button id="start-test">Start Test</button>
+          <button id="run-public-tests" disabled>Run Public Tests</button>
+          <button id="submit" disabled>Submit Final</button>
+          <button id="reset">Reset Code</button>
+          <button id="clear-history" class="danger">Clear History</button>
+        </div>
+
+        <section>
+          <h3>Results</h3>
+          <pre id="results">No test run yet.</pre>
+        </section>
+      </section>
+
+      <aside class="panel" id="history-panel">
+        <div class="history-heading">
+          <h2>Attempt History</h2>
+          <button id="download-history" class="secondary">Export JSON</button>
+        </div>
+        <ul id="history"></ul>
+      </aside>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
