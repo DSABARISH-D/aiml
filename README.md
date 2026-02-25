@@ -1,6 +1,6 @@
 # Coding Test Platform
 
-A more complete browser-based coding assessment platform built with vanilla HTML/CSS/JavaScript.
+A browser-based coding assessment platform built with vanilla HTML/CSS/JavaScript.
 
 ## What this version includes
 
@@ -22,8 +22,26 @@ python3 -m http.server 4173 --bind 0.0.0.0
 
 Then open:
 
-- `http://localhost:4173` (same machine)
-- `http://127.0.0.1:4173` (loopback)
+- `http://localhost:4173`
+- `http://127.0.0.1:4173`
+
+## GitHub Pages deploy (fix for 404 errors)
+
+This repo now includes a Pages workflow at:
+
+- `.github/workflows/deploy-pages.yml`
+
+To deploy successfully:
+
+1. Push this branch to GitHub.
+2. In **Settings → Pages**, set **Build and deployment** to **GitHub Actions**.
+3. Ensure your default branch is one of: `main`, `master`, or `work` (or update the workflow trigger).
+4. Open the **Actions** tab and confirm `Deploy static site to GitHub Pages` passed.
+
+Additional 404 hardening included:
+
+- `.nojekyll` (prevents Jekyll processing issues).
+- `404.html` redirect to `index.html`.
 
 ## Usage flow
 
