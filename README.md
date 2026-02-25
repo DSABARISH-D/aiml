@@ -12,13 +12,18 @@ A more complete browser-based coding assessment platform built with vanilla HTML
 - Export attempt history as JSON.
 - Clear/reset controls for code and historical submissions.
 
-## Run locally
+## Quick Preview
+
+Run this command from the project root:
 
 ```bash
 python3 -m http.server 4173 --bind 0.0.0.0
 ```
 
-Then open `http://localhost:4173`.
+Then open:
+
+- `http://localhost:4173` (same machine)
+- `http://127.0.0.1:4173` (loopback)
 
 ## Usage flow
 
